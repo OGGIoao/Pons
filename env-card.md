@@ -4,59 +4,59 @@
 
 ---
 
+## 好消息
+
+**当前全部 9 张卡都是纯 Python 标准库——零外部依赖，打开就能跑。**
+
+---
+
 ## 按卡片查
 
 | 卡片 | 需要安装 | 一句话 |
 |------|---------|--------|
-| 001 卡特兰数 | **无**（纯 Python 标准库） | 打开就能跑 |
-| 002 博弈论 | **无**（纯 Python 标准库） | 打开就能跑 |
-| 003 差分约束 | **无**（纯 Python 标准库） | 打开就能跑 |
-| 101 数学可视化翻译 | `numpy`, `matplotlib`, `scipy` | pip 一次，全系列用 |
-| 102 机器学习基础 | `scikit-learn`, `numpy`, `matplotlib` | 在 101 基础上加一个 |
-| 103 深度学习入门 | `torch`, `torchvision` | 需要 CUDA（可选） |
+| 001 卡特兰数 | **无**（纯标准库） | 打开就能跑 |
+| 002 博弈论 | **无**（纯标准库） | 打开就能跑 |
+| 003 差分约束 | **无**（纯标准库） | Bellman-Ford 自己手写 |
+| 005 动态规划（0/1背包） | **无**（纯标准库） | 打开就能跑 |
+| 006 背包变体 | **无**（纯标准库） | 打开就能跑 |
+| 007 KMP 字符串匹配 | **无**（纯标准库） | 打开就能跑 |
+| 101 模拟退火 | **无**（纯标准库） | 只用到 `math` + `random` |
+| 102 生命游戏 | **无**（纯标准库） | 只用到 `os` + `time` |
+| 104 图灵机与可计算性 | **无**（纯标准库） | 无任何 import |
 
 ---
 
 ## 按层级装
 
-### 🟢 零依赖（所有纯算法思维卡）
+### 🟢 零依赖（当前全部卡片）
 
 ```bash
-# 什么都不用装。打开 Python，直接写。
-```
-
-### 🟡 最小可视化环境
-
-```bash
-pip install numpy matplotlib scipy
-```
-
-适用：L1 翻译器的所有内容 + 数学可视化相关卡的示例代码
-
-### 🔵 机器学习环境
-
-```bash
-pip install numpy matplotlib scipy scikit-learn
-```
-
-### 🔴 深度学习环境
-
-```bash
-# CPU 版
-pip install torch torchvision
-
-# GPU 版（需 NVIDIA 显卡 + CUDA）
-# 去 https://pytorch.org 选你的配置
+# 什么都不用装。只要 Python 3.8+，直接写。
 ```
 
 ---
 
 ## 一张卡一张环境？太麻烦？
 
-不用。这条命令安装 90% 卡片的依赖：
+不用。因为**当前所有卡片都是零依赖**，你只需要一个 Python 解释器。
+
+---
+
+## 备注：未来可能会加依赖
+
+当前仓库的 `guide/portable-refcard.md` 里保留了「数学可视化 / 机器学习 / 深度学习」的意图→API 映射作为**方法示范**，但仓库里**还没有**对应的卡片。
+
+如果未来新增这些卡片，才会引入以下依赖（现在都不用装）：
 
 ```bash
-pip install numpy matplotlib scipy scikit-learn
+# 数学可视化（未来可选）
+pip install numpy matplotlib scipy
+
+# 机器学习（未来可选）
+pip install scikit-learn
+
+# 深度学习（未来可选，需时再装）
+pip install torch torchvision
 ```
 
-只有深度学习那张需要额外装 PyTorch。
+> 现在开始学习：**零依赖，直接打开任意一张卡。**
