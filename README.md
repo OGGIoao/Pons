@@ -78,11 +78,23 @@
 │   ├── 102-game-of-life.md     ← 生命游戏（跨界）
 │   ├── 104-turing-machine.md   ← 图灵机与可计算性（跨界）
 │   └── ...                     ← 持续增长
+├── scripts/
+│   └── selfcheck.py            ← 自检：参考实现 + 自测用例 + 链接
+├── .github/workflows/
+│   └── check.yml               ← CI：push/PR 自动跑自检
 └── extras/
     └── README.md               ← 跨界序列入口
 ```
 
 > **当前进度**：核心序列 6 张（004 空缺待补）+ 跨界序列 3 张（103 布隆过滤器规划中）。详见 [catalog.md](patterns/catalog.md)。
+
+## 一键自检
+
+```bash
+python3 scripts/selfcheck.py
+```
+
+零依赖：自动提取每张卡的「参考实现 + 自测用例」跑一遍断言，并检查所有内部链接。全绿输出 `通过 9/9 张卡`。每次 push 或发 PR 时，GitHub Actions 也会自动跑一遍。
 
 ---
 
