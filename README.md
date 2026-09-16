@@ -71,11 +71,13 @@
 │   ├── 001-catalan.md          ← 卡特兰数
 │   ├── 002-game-theory.md      ← 博弈论
 │   ├── 003-diff-constraint.md  ← 差分约束
+│   ├── 004-binary-search.md    ← 二分搜索
 │   ├── 005-dp-knapsack.md      ← 动态规划（0/1背包）
 │   ├── 006-knapsack-variants.md ← 背包变体
 │   ├── 007-kmp.md              ← KMP 字符串匹配
 │   ├── 101-simulated-annealing.md ← 模拟退火（跨界）
 │   ├── 102-game-of-life.md     ← 生命游戏（跨界）
+│   ├── 103-bloom-filter.md     ← 布隆过滤器（跨界）
 │   ├── 104-turing-machine.md   ← 图灵机与可计算性（跨界）
 │   └── ...                     ← 持续增长
 ├── scripts/
@@ -86,7 +88,7 @@
     └── README.md               ← 跨界序列入口
 ```
 
-> **当前进度**：核心序列 6 张（004 空缺待补）+ 跨界序列 3 张（103 布隆过滤器规划中）。详见 [catalog.md](patterns/catalog.md)。
+> **当前进度**：核心序列 7 张 + 跨界序列 4 张，共 11 张。详见 [catalog.md](patterns/catalog.md)。
 
 ## 一键自检
 

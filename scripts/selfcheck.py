@@ -25,11 +25,13 @@ CARDS = [
     "001-catalan",
     "002-game-theory",
     "003-diff-constraint",
+    "004-binary-search",
     "005-dp-knapsack",
     "006-knapsack-variants",
     "007-kmp",
     "101-simulated-annealing",
     "102-game-of-life",
+    "103-bloom-filter",
     "104-turing-machine",
 ]
 
