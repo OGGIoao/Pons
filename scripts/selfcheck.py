@@ -21,21 +21,15 @@ import re
 import sys
 from pathlib import Path
 
-CARDS = [
-    "001-catalan",
-    "002-game-theory",
-    "003-diff-constraint",
-    "004-binary-search",
-    "005-dp-knapsack",
-    "006-knapsack-variants",
-    "007-kmp",
-    "101-simulated-annealing",
-    "102-game-of-life",
-    "103-bloom-filter",
-    "104-turing-machine",
-]
-
 PATTERNS = Path(__file__).resolve().parent.parent / "patterns"
+
+# 卡片清单自动发现：glob patterns/*.md（排除 _template 与 catalog），
+# 与 pons-web/scripts/build-cards.mjs 的发现逻辑保持一致——新卡零登记。
+CARDS = sorted(
+    p.stem
+    for p in PATTERNS.glob("*.md")
+    if not p.stem.startswith("_") and p.stem != "catalog"
+)
 
 TEST_HEADER = "#### 🧪 自测用例"
 REF_HEADER = "### 参考实现"
