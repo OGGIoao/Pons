@@ -3,6 +3,9 @@
 > **大脑里负责在不同区域之间传递信号的桥梁。**
 > 这个作品做同样的事——在"意图"和"代码"之间、在"一个问题"和"一个思路"之间、在一个领域和另一个领域之间架桥。
 
+[![在线训练站](https://img.shields.io/badge/在线训练站-oggioao.github.io%2FPons--web-8a6d3b)](https://oggioao.github.io/Pons-web/)
+[![站点仓库](https://img.shields.io/badge/展示层仓库-Pons--web-444444)](https://github.com/OGGIoao/Pons-web)
+
 ---
 
 ## 一句话
@@ -37,6 +40,17 @@
 │  答案：本周挑战 + 你在真实编程中识别出模式后的记录        │
 └──────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 两个仓库
+
+| 仓库 | 角色 |
+|------|------|
+| [OGGIoao/Pons](https://github.com/OGGIoao/Pons)（本仓） | **内容唯一事实来源**：卡片、插画、迁移案例都只在这里维护 |
+| [OGGIoao/Pons-web](https://github.com/OGGIoao/Pons-web) | **展示层**：构建时从本仓拉取内容，渲染成可在线训练的 React 站点 |
+
+push 任一侧都会触发 GitHub Actions 自动重建并部署 [在线训练站](https://oggioao.github.io/Pons-web/)——改内容只需动本仓，改样式只需动 Pons-web。
 
 ---
 
@@ -80,6 +94,10 @@
 │   ├── 103-bloom-filter.md     ← 布隆过滤器（跨界）
 │   ├── 104-turing-machine.md   ← 图灵机与可计算性（跨界）
 │   └── ...                     ← 持续增长
+├── cases/                      ← 23 条迁移案例（frontmatter 声明关联卡；
+│                                 场景/信号/桥接/解答 四段契约）
+├── assets/
+│   └── cards/                  ← 11 张铜版蚀刻插画，<卡id>.png 约定式挂载
 ├── scripts/
 │   └── selfcheck.py            ← 自检：参考实现 + 自测用例 + 链接
 ├── .github/workflows/
