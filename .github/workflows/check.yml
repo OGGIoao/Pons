@@ -17,6 +17,7 @@ jobs:
         run: python3 scripts/selfcheck.py
 
   # push 成功后通知展示层用最新内容重建部署（PR 不触发）
+  # 用 workflow_dispatch 而非 repository_dispatch：fine-grained PAT 不支持后者
   dispatch:
     needs: selfcheck
     if: github.event_name == 'push'
@@ -24,7 +25,7 @@ jobs:
     steps:
       - name: 通知 Pons-web 重新部署
         run: |
-          gh api repos/OGGIoao/Pons-web/dispatches \
-            -f event_type=content-updated
+          gh api repos/OGGIoao/Pons-web/actions/workflows/deploy.yml/dispatches \
+            -f ref=main
         env:
           GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
