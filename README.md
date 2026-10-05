@@ -50,7 +50,7 @@
 | [OGGIoao/Pons](https://github.com/OGGIoao/Pons)（本仓） | **内容唯一事实来源**：卡片、插画、迁移案例都只在这里维护 |
 | [OGGIoao/Pons-web](https://github.com/OGGIoao/Pons-web) | **展示层**：构建时从本仓拉取内容，渲染成可在线训练的 React 站点 |
 
-**更新流程**：改样式直接 push Pons-web，自动部署；改内容（卡片/插画/案例）push 本仓后，再到 Pons-web 的 Actions 里手动 Run 一次 `Deploy to GitHub Pages`，即会用最新内容重建线上站。
+**更新流程**：改样式直接 push Pons-web，自动部署；改内容 push 本仓 → CI 自检通过后**自动触发** Pons-web 重建部署，全程无需手动操作。
 
 ---
 
