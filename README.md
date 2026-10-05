@@ -106,7 +106,7 @@
     └── README.md               ← 跨界序列入口
 ```
 
-> **当前进度**：核心序列 7 张 + 跨界序列 4 张，共 11 张。详见 [catalog.md](patterns/catalog.md)。
+> **当前进度**：核心序列 8 张 + 跨界序列 4 张，共 12 张。详见 [catalog.md](patterns/catalog.md)。
 
 ## 一键自检
 
